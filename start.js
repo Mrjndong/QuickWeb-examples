@@ -1,5 +1,5 @@
 /**
- * QuickWeb 演示程序
+ * QuickWeb 婕旂ず绋嬪簭
  *
  * @author leizongmin<leizongmin@gmail.com>
  * @version 0.1.3
@@ -22,6 +22,6 @@ web.loadPlus();
 var s = web.create(80);
 
 
-// 加入socket.io支持
+// 鍔犲叆socket.io鏀寔
 var io = require('socket.io');
 io = io.listen(s);

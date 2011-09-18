@@ -1,0 +1,17 @@
+{
+   "name":			"QuickWeb-examples",
+   "main":			"./start.js",
+   "author": "leizongmin <leizongmin@gmail.com> (http://lab.ucdok.com)",
+   "repository": {
+		"type": "git",
+		"url": "git://github.com/leizongmin/QuickWeb-examples.git"
+	},
+	"engines": {
+		"node": ">= 0.4.7"
+	},
+	"dependencies":	{
+		"QuickWeb":		">=0.1.5",
+		"socket.io":	"*",
+		"jade":			"*"
+	}
+}

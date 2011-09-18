@@ -5,23 +5,20 @@
  * @version 0.1.3
  */
 
-// require QuickWeb module 
+/* 配置QuickWeb */
 var web = require('../QuickWeb');
-
-// settings
-web.set('wwwroot', './www');				// file path (file_server plus)
-web.set('code_path', './code');				// code path (restful router plus)
-web.set('template_path', './tpl');			// template path (render plus)
-web.set('template_extname', 'html');		// template extname (render plus)
-web.set('tmp_path',	'./tmp');				// temp path
-
-// load all plus
-web.loadPlus();
-
-// create server and listening on port 80
-var s = web.create(80);
+web.set('wwwroot', './html');				// 网站根目录
+web.set('code_path', './code');				// 处理程序目录
+web.set('template_path', './tpl');			// 模板目录
+web.set('template_extname', 'jade');		// 模板扩展名
+web.set('tmp_path',	'./tmp');				// 临时目录
+web.loadPlus('./plus');						// 载入自定义的插件
+var s = web.create(80);						// 监听80端口
 
 
-// 加入socket.io支持
+/* 配置socket.io */
 var io = require('socket.io');
 io = io.listen(s);
+
+// 初始化socket.io的chat程序
+require('./code/init_chat')(io);

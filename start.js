@@ -6,7 +6,7 @@
  */
 
 /* 配置QuickWeb */
-var web = require('../QuickWeb');
+var web = require('QuickWeb');
 web.set('wwwroot', './html');				// 网站根目录
 web.set('code_path', './code');				// 处理程序目录
 web.set('template_path', './tpl');			// 模板目录
